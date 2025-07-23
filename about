@@ -1,0 +1,159 @@
+import { ArrowLeft, Target, Users, Zap, Brain, BarChart3, TrendingUp } from "lucide-react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 text-white">
+      {/* Header */}
+      <header className="border-b border-slate-800 bg-slate-950/95 backdrop-blur">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center">
+            <Button asChild variant="ghost" className="text-slate-300 hover:text-white">
+              <Link href="/" className="flex items-center space-x-2">
+                <ArrowLeft className="h-4 w-4" />
+                <span>Back to Home</span>
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      {/* About Content */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <Brain className="h-16 w-16 text-blue-500" />
+            </div>
+            <h1 className="text-4xl font-bold mb-4">
+              About{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                AutoDash AI
+              </span>
+            </h1>
+            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+              We're revolutionizing data analysis by making advanced analytics accessible to everyone, regardless of
+              technical expertise.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <Card className="bg-slate-800 border-slate-700">
+              <CardHeader>
+                <div className="flex items-center space-x-2">
+                  <Target className="h-6 w-6 text-blue-500" />
+                  <CardTitle className="text-slate-300">Our Mission</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-slate-400">
+                  To democratize data analytics and empower every individual and organization to make intelligent,
+                  data-driven decisions with ease.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-800 border-slate-700">
+              <CardHeader>
+                <div className="flex items-center space-x-2">
+                  <Zap className="h-6 w-6 text-yellow-500" />
+                  <CardTitle className="text-slate-300">Our Vision</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-slate-400">
+                  A world where data insights are instantly accessible, beautifully visualized, and actionable for
+                  businesses of all sizes.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-800 border-slate-700">
+              <CardHeader>
+                <div className="flex items-center space-x-2">
+                  <Users className="h-6 w-6 text-green-500" />
+                  <CardTitle className="text-slate-300">Our Team</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-slate-400">
+                  A passionate team of data scientists, AI engineers, and UX designers committed to creating exceptional
+                  analytical experiences.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Features Section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-8 text-center text-slate-300">What Makes AutoDash AI Special</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="flex items-start space-x-4">
+                <div className="p-2 bg-blue-600/20 rounded-lg">
+                  <Brain className="h-6 w-6 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-300 mb-2">AI-Powered Analysis</h3>
+                  <p className="text-slate-400">
+                    Advanced machine learning algorithms automatically detect patterns, anomalies, and insights in your
+                    data.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="p-2 bg-green-600/20 rounded-lg">
+                  <BarChart3 className="h-6 w-6 text-green-400" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-300 mb-2">Instant Visualizations</h3>
+                  <p className="text-slate-400">
+                    Beautiful, interactive charts and dashboards generated automatically from your data with zero
+                    configuration required.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="p-2 bg-purple-600/20 rounded-lg">
+                  <TrendingUp className="h-6 w-6 text-purple-400" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-300 mb-2">Smart Data Cleaning</h3>
+                  <p className="text-slate-400">
+                    Intelligent preprocessing handles missing values, data type conversion, and quality issues
+                    automatically.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="p-2 bg-yellow-600/20 rounded-lg">
+                  <Users className="h-6 w-6 text-yellow-400" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-slate-300 mb-2">User-Friendly Interface</h3>
+                  <p className="text-slate-400">
+                    Designed for everyone - from data novices to experts. No coding or technical knowledge required.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-4 text-slate-300">Ready to Transform Your Data?</h2>
+            <p className="text-slate-400 mb-6">
+              Join thousands of users who trust AutoDash AI for their data analysis needs.
+            </p>
+            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Link href="/auth">Start Analyzing Today</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
